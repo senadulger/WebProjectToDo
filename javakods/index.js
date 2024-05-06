@@ -13,7 +13,6 @@ function ekle() {
     list.appendChild(label);
     idmaker++;
 }
-
 var addbutton = document.getElementById("addbutton");
 addbutton.addEventListener("click", () => ekle());
 var deletebutton = document.getElementById("deletebutton");
@@ -23,9 +22,8 @@ deletebutton.addEventListener("click", () => {
 })
 function alarm() { alert('deneme') }
 
-function sil(id) {
+function sil(element) {
     var parents = document.getElementById('taskList');
-    var ch = document.getElementById(id.toString);
-    var bisi = parents.removeChild(ch);
+    var bisi = parents.removeChild(parents.children[element]);
 
 }
