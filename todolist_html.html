@@ -10,13 +10,13 @@
     <header>
         <div class="container">
             <div class="formTask">
-                <form id="taskForm">
+                <form id="taskForm" onsubmit="return false">
                     <h1>To-Do List</h1>
                     <div class="inputBox">
                         <input type="text" id="taskInput" placeholder="Add a new task">
                     </div>
-                    <button type="submit" class="bttn">Add Task</button>
-                    <button type="submit" class="deletebttn">Delete</button>
+                    <button  class="bttn" id="bttn">Add Task</button>
+                    <button  class="deletebttn">Delete</button>
                 </form>
             </div>
             <div>
