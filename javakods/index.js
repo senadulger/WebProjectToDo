@@ -33,7 +33,14 @@ function CreateToList(){
     listeleman.appendChild(node);
     lbl.appendChild(listeleman);
     lbl.addEventListener('click',()=>{
-        ChangeToComp(lbl.getAttribute('id'))});
+        if (confirm('silinsin mi')) {
+            // Save it!
+            RemoveTheLocal(lbl.getAttribute('id')); 
+          } else {
+            // Do nothing!
+            ChangeToComp(lbl.getAttribute('id'));}
+        })
+        
     lbl.addEventListener('contextmenu',()=>{
         EditTheList(lbl.getAttribute('id'));
         console.log('sag tiklandi');        
@@ -69,6 +76,7 @@ function RemoveTheLocal(id){
 function EditTheList(id){
   var loc = GetToLocal();
   var a =prompt('Yeni Taski giriniz');
+  
   loc[id].todo=a;
   localStorage.setItem('list',JSON.stringify(loc));
   RemoveTheList();
@@ -82,3 +90,9 @@ function ChangeToComp(id){
     RemoveTheList();
     CreateToList();
 }
+
+document.addEventListener("contextmenu",(e)=>{
+    document.createElement()
+    e.preventDefault();
+})
+
