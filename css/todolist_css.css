@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: first baseline;
     min-height: 100vh;
-    background: url(extensions/backgorund.jpeg) no-repeat;
+    background: url(backgorund.jpeg) no-repeat;
     background-size: cover;
     background-position: center;
 }
