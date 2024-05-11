@@ -1,4 +1,5 @@
-if(localStorage.getItem('list')==NaN){
+
+if(localStorage.getItem('list')==null){
 localStorage.setItem('list',"[]");}
 function GetToLocal(){
 var Temp = JSON.parse(localStorage.getItem('list'));
@@ -28,18 +29,17 @@ function CreateToList(){
     if(element.done == true){
         lbl.setAttribute('class','taskcompleted');
     }else{lbl.setAttribute('class','tasknotcompleted')}
-    lbl.setAttribute('name','lbl');
+    lbl.setAttribute('id',index);
     listeleman.appendChild(node);
     lbl.appendChild(listeleman);
     lbl.addEventListener('click',()=>{
-        if (element.done==true) {
-            element.done=false; 
-            
-        } else {element.done=true;
-            
-        }
-
+        ChangeToComp(lbl.getAttribute('id'))});
+    lbl.addEventListener('contextmenu',()=>{
+        EditTheList(lbl.getAttribute('id'));
+        console.log('sag tiklandi');        
     });
+
+    
     list.appendChild(lbl);
     
         
@@ -58,3 +58,27 @@ document.getElementById('bttn').addEventListener('click',()=>{
     RemoveTheList();
     CreateToList();
 })
+function RemoveTheLocal(id){
+   var loc = GetToLocal();
+   loc.splice(id,1);
+   localStorage.setItem('list',JSON.stringify(loc));
+   RemoveTheList();
+   CreateToList();
+}
+
+function EditTheList(id){
+  var loc = GetToLocal();
+  var a =prompt('Yeni Taski giriniz');
+  loc[id].todo=a;
+  localStorage.setItem('list',JSON.stringify(loc));
+  RemoveTheList();
+  CreateToList();
+}
+
+function ChangeToComp(id){
+    var loc = GetToLocal();
+    if(loc[id].done==true){loc[id].done=false}else{loc[id].done=true}
+    localStorage.setItem('list',JSON.stringify(loc));
+    RemoveTheList();
+    CreateToList();
+}
