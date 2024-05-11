@@ -1,4 +1,4 @@
-
+var selectedOne;
 if(localStorage.getItem('list')==null){
 localStorage.setItem('list',"[]");}
 function GetToLocal(){
@@ -33,12 +33,7 @@ function CreateToList(){
     listeleman.appendChild(node);
     lbl.appendChild(listeleman);
     lbl.addEventListener('click',()=>{
-        if (confirm('silinsin mi')) {
-            // Save it!
-            RemoveTheLocal(lbl.getAttribute('id')); 
-          } else {
-            // Do nothing!
-            ChangeToComp(lbl.getAttribute('id'));}
+       selectedOne=lbl.getAttribute('id');
         })
         
     lbl.addEventListener('contextmenu',()=>{
@@ -92,7 +87,14 @@ function ChangeToComp(id){
 }
 
 document.addEventListener("contextmenu",(e)=>{
-    document.createElement()
+
     e.preventDefault();
 })
-
+document.getElementById('deletebttn').addEventListener('click',()=>{
+RemoveTheLocal(selectedOne);
+selectedOne = NaN;
+})
+document.getElementById('donebttn').addEventListener('click',()=>{
+    ChangeToComp(selectedOne);
+    selectedOne=NaN;
+})
