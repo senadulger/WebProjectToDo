@@ -62,7 +62,8 @@ document.getElementById('bttn').addEventListener('click',()=>{
 })
 function RemoveTheLocal(id){
    var loc = GetToLocal();
-   loc.splice(id,1);
+   if(id!=NaN){
+   loc.splice(id,1);}else{loc = [];}
    localStorage.setItem('list',JSON.stringify(loc));
    RemoveTheList();
    CreateToList();
