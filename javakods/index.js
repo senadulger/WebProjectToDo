@@ -33,7 +33,7 @@ function CreateToList(){
     listeleman.appendChild(node);
     lbl.appendChild(listeleman);
     lbl.addEventListener('click',()=>{
-        if (confirm('silinsin mi')) {
+        if (confirm('Delete task?')) {
             // Save it!
             RemoveTheLocal(lbl.getAttribute('id')); 
           } else {
@@ -75,7 +75,7 @@ function RemoveTheLocal(id){
 
 function EditTheList(id){
   var loc = GetToLocal();
-  var a =prompt('Yeni Taski giriniz');
+  var a =prompt('Enter new task!');
   
   loc[id].todo=a;
   localStorage.setItem('list',JSON.stringify(loc));
@@ -95,4 +95,3 @@ document.addEventListener("contextmenu",(e)=>{
     document.createElement()
     e.preventDefault();
 })
-
