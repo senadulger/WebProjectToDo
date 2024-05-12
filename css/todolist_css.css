@@ -71,6 +71,7 @@ body {
 
 #taskList {
     width: auto;
+    height: 240px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(20px);
@@ -80,7 +81,7 @@ body {
     margin: 20px auto;
     align-items: center;
     justify-content: center;
-    overflow: auto;
+    overflow-y: scroll;
     font-size: 18px;
 }
 
@@ -91,8 +92,8 @@ body {
 .tasknotcompleted {
     color: #ff0000;
 }
-  
-  #Filter {
+
+#Filter {
     margin-left: 425px;
     margin-right: 5px;
     padding: 10px 20px;
@@ -101,13 +102,13 @@ body {
     background-color: whitesmoke;
     font-size: 14px;
     appearance: none;
-  }
-  
-  #Filter option:checked {
+}
+
+#Filter option:checked {
     background-color: whitesmoke;
-    }
-  
-  #Fbttn {
+}
+
+#Fbttn {
     background-color: #3d8f40;
     color: whitesmoke;
     padding: 10px 20px;
@@ -116,7 +117,4 @@ body {
     cursor: pointer;
     margin-top: 5px;
     font-size: 14px;
-  }
-  
-
-  
+}

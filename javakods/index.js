@@ -36,12 +36,12 @@ function CreateToList() {
             lbl.addEventListener('click', () => {
                 selectedOne = lbl.getAttribute('id');
                 var rick = document.getElementsByClassName('task').length;
-                if(lbl.getAttribute('class')=='task'||rick>=1){
+                if (lbl.getAttribute('class') == 'task' || rick >= 1) {
                     RemoveTheList()
                     CreateToList();
                     selectedOne = null;
-                }else{lbl.setAttribute('class','task');}
-            
+                } else { lbl.setAttribute('class', 'task'); }
+
             })
 
             lbl.addEventListener('contextmenu', () => {
@@ -49,17 +49,17 @@ function CreateToList() {
                 console.log('sag tiklandi');
             });
             a = document.getElementById('Filter').value;
-            switch(a){
-                case 'Fall':list.appendChild(lbl);
-                break;
-                case 'Fnotcomplit':if(lbl.getAttribute('class')=='tasknotcompleted'){list.appendChild(lbl);}
-                break;
-                case 'Fcomplit':if(lbl.getAttribute('class')=='taskcompleted'){list.appendChild(lbl);}
-                break;
-                default:list.appendChild(lbl);
-                break;
+            switch (a) {
+                case 'Fall': list.appendChild(lbl);
+                    break;
+                case 'Fnotcomplit': if (lbl.getAttribute('class') == 'tasknotcompleted') { list.appendChild(lbl); }
+                    break;
+                case 'Fcomplit': if (lbl.getAttribute('class') == 'taskcompleted') { list.appendChild(lbl); }
+                    break;
+                default: list.appendChild(lbl);
+                    break;
             };
-            
+
 
 
         }
@@ -95,8 +95,9 @@ function RemoveTheLocal(id) {
 function EditTheList(id) {
     var loc = GetToLocal();
     var a = prompt('Enter new task!');
-    if(a!=null){
-    loc[id].todo = a;}
+    if (a != null) {
+        loc[id].todo = a;
+    }
     localStorage.setItem('list', JSON.stringify(loc));
     RemoveTheList();
     CreateToList();
@@ -122,7 +123,7 @@ document.getElementById('donebttn').addEventListener('click', () => {
     ChangeToComp(selectedOne);
     selectedOne = null;
 })
-document.getElementById('Fbttn').addEventListener('click',()=>{
+document.getElementById('Fbttn').addEventListener('click', () => {
     RemoveTheList();
     CreateToList();
 })
