@@ -1,10 +1,12 @@
+/* Genel stil ayarları */
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0; 
+    padding: 0; 
     box-sizing: border-box;
     font-family: monospace, sans-serif;
 }
 
+/* Sayfa stil ayarları */
 body {
     display: flex;
     justify-content: center;
@@ -15,6 +17,7 @@ body {
     background-position: center;
 }
 
+/* Form stil ayarları */
 .formTask {
     width: 700px;
     background: transparent;
@@ -25,12 +28,14 @@ body {
     padding: 20px 40px;
 }
 
+/* Başlık stil ayarları */
 .formTask h1 {
     font-size: 46px;
     text-align: center;
     font-family: "Cairo Play", sans-serif;
 }
 
+/* Input kutusu stil ayarları */
 .formTask .inputBox {
     width: 100%;
     height: 50px;
@@ -54,6 +59,7 @@ body {
     color: whitesmoke;
 }
 
+/* Buton stil ayarları */
 .formTask .bttn {
     width: 100%;
     height: 45px;
@@ -69,6 +75,7 @@ body {
     margin: 5px;
 }
 
+/* Görev listesi stil ayarları */
 #taskList {
     width: auto;
     height: 240px;
@@ -85,14 +92,17 @@ body {
     font-size: 18px;
 }
 
+/* Tamamlanan görevlerin rengi */
 .taskcompleted {
     color: green;
 }
 
+/* Tamamlanmamış görevlerin rengi */
 .tasknotcompleted {
     color: #ff0000;
 }
 
+/* Filtre seçeneği stil ayarları */
 #Filter {
     margin-left: 425px;
     margin-right: 5px;
@@ -104,10 +114,12 @@ body {
     appearance: none;
 }
 
+/* Seçilen filtre seçeneğinin arka plan rengi */
 #Filter option:checked {
     background-color: whitesmoke;
 }
 
+/* Filtreleme butonu stil ayarları */
 #Fbttn {
     background-color: #3d8f40;
     color: whitesmoke;

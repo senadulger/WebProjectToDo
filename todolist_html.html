@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
-    <link rel="stylesheet" href="css/todolist_css.css" type="text/css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/todolist_css.css" type="text/css"> <!-- CSS dosyasinin HTML dosyasina tanimlanmasi -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Baslik icin disaridan font yuklenmesi -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="css/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="css/favicon.ico"> <!-- Icon duzenlenmesi -->
 </head>
 
 <body>
     <header>
         <div class="container">
-            <div class="formTask">
+            <div class="formTask"> <!-- Bu form yeni gorev eklemek, silmek ve durumunu guncellemek icin kullanilir -->
                 <form id="taskForm" onsubmit="return false">
                     <h1>To-Do List</h1>
                     <div class="inputBox">
@@ -26,7 +26,7 @@
                     <button class="bttn" id="donebttn">Done</button>
             </div>
 
-            <div>
+            <div> <!-- Bu secenekler filtrelemek icin kullanilir -->
                 <select id="Filter">
                     <option value="Fall" selected>All</option>
                     <option value="Fnotcomplit">Incompleted</option>
@@ -35,14 +35,14 @@
                 <button id="Fbttn">Use Filter</button>
             </div>
 
-            <div>
+            <div> <!-- Bu liste gorevlerin listelendigi alandir -->
                 <ul id="taskList">
                 </ul>
             </div>
         </div>
     </header>
 
-    <script src="javakods/todolist_js.js"></script>
+    <script src="javakods/todolist_js.js"></script> <!-- JavaScript dosyalarinin yuklenmesi -->
 
 </body>
 
