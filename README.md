@@ -40,5 +40,5 @@ With this simple To-Do List application, you can easily manage your daily tasks.
 If you would like to contribute to this project, you can do so by sending a pull request to the GitHub repository or by opening an issue report.
 This guide provides basic information on how to use the To-Do List application and guides contributors on how to contribute to the development process. If you have any questions or feedback, please let us know.
 
-- **GitHub Project Link:**
-- **URL:**
+- **GitHub Project Link:** https://github.com/SerhatCanBakir/WebProjectToDo
+- **URL:** http://todolistforweblesson.great-site.net/
