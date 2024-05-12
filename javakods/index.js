@@ -71,7 +71,7 @@ document.getElementById('bttn').addEventListener('click', () => {
 })
 function RemoveTheLocal(id) {
 
-    if (id == NaN) {
+    if (id == null) {
         var loc = [];
     } else {
         var loc = GetToLocal();
@@ -106,9 +106,9 @@ document.addEventListener("contextmenu", (e) => {
 })
 document.getElementById('deletebttn').addEventListener('click', () => {
     RemoveTheLocal(selectedOne);
-    selectedOne = NaN;
+    selectedOne = null;
 })
 document.getElementById('donebttn').addEventListener('click', () => {
     ChangeToComp(selectedOne);
-    selectedOne = NaN;
+    selectedOne = null;
 })
