@@ -39,6 +39,7 @@ function CreateToList() {
                 if(lbl.getAttribute('class')=='task'||rick>=1){
                     RemoveTheList()
                     CreateToList();
+                    selectedOne = null;
                 }else{lbl.setAttribute('class','task');}
             
             })
