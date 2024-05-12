@@ -66,7 +66,7 @@ body {
     font-size: 16px;
     color: grey;
     font-weight: 600;
-    margin: 10px;
+    margin: 5px;
 }
 
 #taskList {
@@ -81,6 +81,7 @@ body {
     align-items: center;
     justify-content: center;
     overflow: auto;
+    font-size: 18px;
 }
 
 .taskcompleted {
@@ -88,6 +89,34 @@ body {
 }
 
 .tasknotcompleted {
-    color: red;
+    color: #ff0000;
 }
+  
+  #Filter {
+    margin-left: 425px;
+    margin-right: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    font-size: 14px;
+    appearance: none;
+  }
+  
+  #Filter option:checked {
+    background-color: whitesmoke;
+    }
+  
+  #Fbttn {
+    background-color: #3d8f40;
+    color: whitesmoke;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  
+
   

@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="css/favicon.ico">
 </head>
 
 <body>
@@ -22,22 +23,27 @@
                     </div>
                     <button class="bttn" id="bttn">Add Task</button>
                     <button class="bttn" id="deletebttn">Delete</button>
-                    <button class="bttn" id="donebttn">done</button>
-                   <select id="Filter">
-                    <option value="Fall" selected>Show All</option>
-                    <option value="Fnotcomplit">just not complited</option>
-                    <option value="Fcomplit">just  complited</option>
-                   </select>
-                   <button id="Fbttn">use filter</button>
-
+                    <button class="bttn" id="donebttn">Done</button>
             </div>
+
+            <div>
+                <select id="Filter">
+                    <option value="Fall" selected>All</option>
+                    <option value="Fnotcomplit">Incompleted</option>
+                    <option value="Fcomplit">Completed</option>
+                </select>
+                <button id="Fbttn">Use Filter</button>
+            </div>
+
             <div>
                 <ul id="taskList">
-                
+                    <li class="taskcompleted"></li>
+                    <li class="tasknotcompleted"></li>
                 </ul>
             </div>
         </div>
     </header>
+
     <script src="javakods/index.js"></script>
 
 </body>

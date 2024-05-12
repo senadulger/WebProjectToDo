@@ -94,7 +94,7 @@ function RemoveTheLocal(id) {
 
 function EditTheList(id) {
     var loc = GetToLocal();
-    var a = prompt('Yeni Taski giriniz');
+    var a = prompt('Enter new task!');
     if(a!=null){
     loc[id].todo = a;}
     localStorage.setItem('list', JSON.stringify(loc));
