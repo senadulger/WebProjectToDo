@@ -31,7 +31,7 @@ With this simple To-Do List application, you can easily manage your daily tasks.
 
 ## Technical Details
 - **HTML and CSS:** HTML and CSS are used for page layout and styling.
-- **JavaScript:** JavaScript is used for adding, deleting, completing, and filtering tasks.
+- **JavaScript:** JavaScript is used for adding, deleting, editing, completing, and filtering tasks.
 - **Fonts:** "Cairo Play" font is used for the title. This font is loaded from Google Fonts.
 - **Background Image:** The image used in the background of the page is named "bg.jpeg" and utilized accordingly.
 - **Favicon:** "favicon.ico" is used as the tab icon for the page.
