@@ -55,6 +55,8 @@ function CreateToList() {
                 case 'Fnotcomplit':if(lbl.getAttribute('class')=='tasknotcompleted'){list.appendChild(lbl);}
                 break;
                 case 'Fcomplit':if(lbl.getAttribute('class')=='taskcompleted'){list.appendChild(lbl);}
+                default:list.appendChild(lbl);
+                break;
             };
             
 
