@@ -8,10 +8,10 @@ To-Do List
 - 220229053 Sena Nur Dulger
 
 
-## To-Do List User Guide
+# To-Do List User Guide
 With this simple To-Do List application, you can easily manage your daily tasks. The application provides basic functions such as adding, deleting, completing, and filtering tasks.
 
-# How to Use
+## How to Use
 
 1. Adding a Task:
     - Type the task you want to add into the "Add a new task" text box and press Enter, or click the "Add Task" button.
