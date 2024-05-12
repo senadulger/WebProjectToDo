@@ -1,12 +1,14 @@
 var selectedOne = NaN;
+//localden bilgi cekerken hata vermemesi icin baslangic degeri
 if (localStorage.getItem('list') == null) {
     localStorage.setItem('list', "[]");
 }
+// localden bilgi alır
 function GetToLocal() {
     var Temp = JSON.parse(localStorage.getItem('list'));
     return Temp;
 }
-
+// local'e ekleme yapar
 function AddToLocal(Task) {
     var Temp = [];
 
@@ -17,8 +19,8 @@ function AddToLocal(Task) {
     localStorage.setItem('list', JSON.stringify(Temp));
 
 }
+// liste yaratmaya yarar
 function CreateToList() {
-
     var temp = GetToLocal() || [];
     if (Array.isArray(temp)) {
         for (let index = 0; index < temp.length; index++) {
@@ -36,6 +38,7 @@ function CreateToList() {
             lbl.addEventListener('click', () => {
                 selectedOne = lbl.getAttribute('id');
                 var rick = document.getElementsByClassName('task').length;
+                //tek bir eleman secildiğinden emin olur
                 if (lbl.getAttribute('class') == 'task' || rick >= 1) {
                     RemoveTheList()
                     CreateToList();
@@ -49,6 +52,7 @@ function CreateToList() {
                 console.log('sag tiklandi');
             });
             a = document.getElementById('Filter').value;
+            // filtreye gore listeyi duzenler
             switch (a) {
                 case 'Fall': list.appendChild(lbl);
                     break;
@@ -65,7 +69,9 @@ function CreateToList() {
         }
     }
 }
+// listenin icini bosaltir
 function RemoveTheList() {
+    
     const list = document.getElementById('taskList');
     var len = list.childElementCount;
     while (list.firstChild) {
@@ -79,6 +85,7 @@ document.getElementById('bttn').addEventListener('click', () => {
     RemoveTheList();
     CreateToList();
 })
+// localden secilen elemanı siler
 function RemoveTheLocal(id) {
 
     if (id == null) {
@@ -91,7 +98,7 @@ function RemoveTheLocal(id) {
     RemoveTheList();
     CreateToList();
 }
-
+// secilen elemanı değiştirir
 function EditTheList(id) {
     var loc = GetToLocal();
     var a = prompt('Enter new task!');
@@ -102,7 +109,7 @@ function EditTheList(id) {
     RemoveTheList();
     CreateToList();
 }
-
+// localde yapılma durumunu değistirir
 function ChangeToComp(id) {
     var loc = GetToLocal();
     if (loc[id].done == true) { loc[id].done = false } else { loc[id].done = true }
@@ -110,7 +117,7 @@ function ChangeToComp(id) {
     RemoveTheList();
     CreateToList();
 }
-
+// sağ clicki kapatır
 document.addEventListener("contextmenu", (e) => {
 
     e.preventDefault();
