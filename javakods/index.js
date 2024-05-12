@@ -48,9 +48,15 @@ function CreateToList() {
                 EditTheList(lbl.getAttribute('id'));
                 console.log('sag tiklandi');
             });
-
-
-            list.appendChild(lbl);
+            a = document.getElementById('Filter').value;
+            switch(a){
+                case 'Fall':list.appendChild(lbl);
+                break;
+                case 'Fnotcomplit':if(lbl.getAttribute('class')=='tasknotcompleted'){list.appendChild(lbl);}
+                break;
+                case 'Fcomplit':if(lbl.getAttribute('class')=='taskcompleted'){list.appendChild(lbl);}
+            };
+            
 
 
         }
