@@ -83,7 +83,7 @@ body {
 }
 
 #taskList {
-    width: auto; 
+    width: auto;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(20px);
@@ -97,10 +97,10 @@ body {
     overflow-y: auto;
 }
 
+.taskcompleted {
+    color: green;
+}
 
-
-
-
-
-
-
+.tasknotcompleted {
+    color: red;
+}
