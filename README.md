@@ -18,6 +18,7 @@ With this simple To-Do List application, you can easily manage your daily tasks.
 
 2. Deleting a Task:
     - You can delete a task by clicking on it and then clicking the "Delete" button.
+    - If you want to delete all tasks, simply click the 'Delete' button.
 
 3. Editing a Task:
     - You can edit your task by right-clicking.
